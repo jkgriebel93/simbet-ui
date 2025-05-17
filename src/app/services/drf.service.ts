@@ -1,6 +1,7 @@
 import {inject, Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import { Track } from '../interfaces/track';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class DrfService {
   constructor() { }
 
   getEntriesForDate(date: string): Observable<any> {
-    return this.http.get(this.proServiceBaseUrl + 'entries/date/' + date);
+    return this.http.get<Track[]>(this.proServiceBaseUrl + 'entries/date/' + date);
   }
 
 }
