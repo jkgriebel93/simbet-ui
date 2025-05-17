@@ -11,5 +11,5 @@ import { HomeComponent } from './components/home/home.component';
 })
 export class AppComponent {
   title = 'simbet-ui';
-  raceDate = '20250515'
+  raceDate = '20250517'
 }
